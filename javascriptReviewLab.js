@@ -98,3 +98,245 @@ if (animal == "panther") {
 console.log("");
 
 // Commit
+
+// E. Driver's Ed
+// Make a variable that holds a person's age; be semantic
+// Write code that will print out "Here are the keys!", if the age is 16 years or older, or, 
+//if the age is younger than 16, a message should print "Sorry, you're too young."
+
+let personAge = 23;
+console.log(personAge);
+if (personAge >= 16) {
+    console.log("Here are the keys!")
+} else {
+    console.log("Sorry, you're too young.")
+};
+console.log(personAge);
+console.log("");
+
+// ***II. Loops
+// ***Remember: USE let when you initialize your for loops!
+
+// ***This is GOOD: for(let i = 0; i < 100; i++)
+
+// ***This is NO GOOD: for(i = 0; i < 100; i++)
+// A. The basics
+// Write a loop that will print out all the numbers from 0 to 10, inclusive
+for (let i = 0; i >= 0 && i <= 10; i++) {
+    console.log(i)
+};
+console.log("");
+
+// Write a loop that will print out all the numbers from 10 up to and including 400
+for (let i = 10; i >= 10 && i <= 400; i++) {
+    console.log(i)
+};
+console.log("");
+
+// Write a loop that will print out every third number starting with 12 and going no higher than 4000
+for (let i = 12; i >= 12 && i < 4000; i+=3) {
+    console.log(i)
+};
+console.log("");
+
+// B. Get even
+// Print out the numbers that are within the range of 1 - 100
+for (let i = 1; i > 0 && i <= 100; i++) {
+    console.log(i)
+};
+console.log("");
+
+// Adjust your code to add a message next to even numbers only that says: "<-- is an even number"
+for (let i = 1; i > 0 && i <= 100; i++) {
+    if (i % 2 === 0) {
+        console.log(i + " <-- is an even number")
+    } else {
+        console.log(i)
+    }
+};
+console.log("");
+
+// C. Give me Five
+// For the numbers 0 - 100, print out "I found a number. High five!" if the number is a multiple of five
+// Example Output:
+// I found a 5. High five!
+// I found a 10. High five!
+
+for (let i = 0; i >= 0 && i <= 100; i++) {
+    if (i % 5 === 0 && i != 0) {
+        console.log("I found a " + i + ". High five!")
+    } else {
+        console.log(i)
+    }
+};
+console.log("");
+
+// Add to the code from above to print out "I found a number. Three is a crowd" if the number is a multiple of three
+// Example Output:
+// I found a 3. Three is a crowd
+// I found a 5. High five!
+// I found a 6. Three is a crowd
+// I found a 9. Three is a crowd
+// I found a 10. High five!
+// For numbers divisible by both three and five, be sure your code prints both messages
+for (let i = 0; i >= 0 && i <= 100; i++) {
+    if (i % 15 === 0 && i != 0) {
+        console.log("I found a " + i + ". Three is a crowd. High Five!")
+    } else if (i % 3 === 0 && i != 0) {
+        console.log("I found a " + i + ". Three is a crowd")
+    } else if (i % 5 === 0 && i != 0) {
+        console.log("I found a " + i + ". High five!")
+    } else {
+        console.log(i)
+    }
+};
+console.log("");
+
+// D. Savings account
+// Write code that will save the sum of all the numbers between 1 - 10 to a variable called bank_account.
+// Check your work! Your bank_account should have $55 in it.
+
+let bank_account = 0;
+function addNumbers() {
+    for (i = 1; i > 0 && i <= 10; i++) {
+        bank_account += i;
+    }
+};
+addNumbers();
+console.log("$" + bank_account);
+console.log("");
+
+// You got a bonus! Your pay is now doubled each week. Write code that will save the sum of all the numbers between 1 - 100 multiplied by 2.
+// Check your work! Your bank_account should have $10,100 in it.
+
+let bank_account_bonus = 0;
+function addBonus() {
+    for (i = 0; i > -1 && i <= 100; i++) {
+        bank_account_bonus += i;
+    }
+    bank_account_bonus = bank_account_bonus * 2
+};
+addBonus();
+console.log("$" + bank_account_bonus);
+console.log("");
+
+// III. Arrays & Control flow
+// A. Talk about it:
+//1) What are the things in an array called?
+//The things in an array are called elements.
+
+//2) Do Arrays guarantee those things will be in order?
+//Arrays do not guarantee those things will be in order, the arrays only contain the data within each index defined by that element.
+
+//3) What real-life thing could you model with an array?
+//You can model many things with an array; such as articles of clothing in your closet, different addresses, record of any collections
+//you may have like movies, music, or collectible cards.
+
+// B. Easy Does It
+// Create an array that contains three quotes and store it in a variable called quotes
+
+let quotes = ["", "", ""];
+
+// C. Accessing elements
+// Given the following array const randomThings = [1, 10, "Hello", true]
+const randomThings = [1, 10, "Hello", true];
+console.log(randomThings);
+console.log("");
+
+// How do you access the 1st element in the array?
+console.log(randomThings[0]);
+console.log("");
+
+// Change the value of "Hello"to "World"
+// Check the value of the array to make sure it updated the array. How? Why, yes! console.log();
+randomThings[2] = "World";
+console.log(randomThings);
+console.log("");
+
+// D. Change values
+// Given the following array const ourClass = ["Salty", "Zoom", "Sardine", "Slack", "Github"]
+const ourClass = ["Salty", "Zoom", "Sardine", "Slack", "Github"];
+console.log(ourClass);
+console.log("");
+
+// What would you write to access the 3rd element of the array?
+console.log(ourClass[2]);
+console.log("");
+
+// Change the value of "Github" to "Octocat"
+ourClass[4] = "Octocat";
+console.log(ourClass);
+console.log("");
+
+// Add a new element, "Cloud City" to the array
+ourClass.push("Cloud City");
+console.log(ourClass);
+console.log("");
+
+// E. Mix It Up
+// ***Note: You don't really need .splice()for these. You could use it, but there are simpler array methods that are more appropriate.
+
+// Given the following array: const myArray = [5, 10, 500, 20]
+const myArray = [5, 10, 500, 20];
+console.log(myArray);
+console.log("");
+
+// Add the string "Aegon"to the end of the array. Add another string of your choice to the end of the array.
+myArray.push("Aegon");
+console.log(myArray);
+console.log("");
+
+// Remove the 5 from the beginning of the array.
+delete myArray[0];
+console.log(myArray);
+console.log("");
+
+// Add the string "Bob Marley"to the beginning of the array.
+myArray[0] = "Bob Marley";
+console.log(myArray);
+console.log("");
+
+// Remove the string of your choice from the end of the array.
+delete myArray[4];
+console.log(myArray);
+console.log("");
+
+// Reverse this array using Array.prototype.reverse(). 
+myArray.reverse();
+console.log(myArray);
+console.log("");
+
+//Did you mutate the array? What does mutate mean?
+//Yes, the array was mutated meaning it was modified to reflect or return in opposite order.
+
+//Did the .reverse()method return anything?
+//The .reverse() method itself returns the array with the elements in reverse order.
+
+// F. Biggie Smalls
+// Create a variable that contains an integer.
+let aNumber = 5
+
+// Write an if ... elsestatement that:
+// console.log()s "little number" if the number is entered is less than 100
+// console.log()s big numberif the number is greater than or equal to 100.
+if (aNumber < 100) {
+    console.log("little number")
+} else if (aNumber >= 100) {
+    console.log("big number")
+};
+console.log("");
+
+// G. Monkey in the Middle
+// Write an if ... else if ... elsestatement:
+// console.log()little numberif the number entered is less than 5.
+// If the number entered is more than 10, log big number.
+// Otherwise, log "monkey".
+if (aNumber < 5) {
+    console.log("little number")
+} else if (aNumber > 10) {
+    console.log("big number")
+} else {
+    console.log("monkey")
+};
+console.log("");
+
