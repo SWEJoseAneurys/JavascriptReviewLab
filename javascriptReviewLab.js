@@ -425,3 +425,135 @@ console.log("");
 console.log("FREEBIEEEEEE Thanks, Chase!");
 console.log("");
 
+// B. printCool
+// Write a function printCool that accepts one parameter, name as an argument. 
+//The function should print the name and a message saying that that person is cool.
+// console.log(printCool("Captain Reynolds"));
+// => "Captain Reynolds is cool";
+function printCool(name) {
+    console.log("Woah, " + name + "! You're so cool!");
+};
+printCool("Jose");
+console.log("");
+
+// C. calculateCube
+// Write a function calculateCubethat takes a single number and prints the volume of a cube made from that number.
+// console.log(calculateCube(5));
+// => 125
+
+function calculateCube(number) {
+    let numberCubed = number * number * number;
+    console.log(numberCubed);
+};
+calculateCube(5);
+console.log("");
+
+// D. isVowel
+// Write a function isVowel that takes a character (i.e. a string of length 1) and returns true if it is a vowel, false otherwise. 
+// The vowel could be upper or lower case. Test your function on every vowel and make sure it's working. 
+// In general, when you write functions, take a minute to test them with different values to make sure they behave the way you want.
+// console.log(isVowel("a"));
+// => true
+
+let vowels = ["A", "a", "E", "e", "I", "i", "O", "o", "U", "u"];
+
+function isVowel(vowel) {
+    for (x = 0; x < vowels.length; x++) {
+        if (vowels[x] == vowel) {
+            console.log(true);
+        } else {
+            console.log(false);
+        }
+    }
+};
+
+isVowel();
+console.log("");
+
+// E. getTwoLengths
+// Write a function getTwoLengths that accepts two parameters (strings). 
+//The function should return an array of numbers where each number is the length of the corresponding string.
+// console.log(getTwoLengths("Hank", "Hippopopalous"));
+// => [4, 13]
+
+function getTwoLengths(string1, string2) {
+    console.log([string1.length, string2.length]);
+};
+
+getTwoLengths("This", "Works");
+console.log("");
+
+// F. getMultipleLengths
+// Write a function getMultipleLengths that accepts a single parameter as an argument: an array of strings. 
+//The function should return an array of numbers where each number is the length of the corresponding string.
+// console.log(getMultipleLengths(["hello", "what", "is", "up", "dude"]));
+// => [5, 4, 2, 2, 4]
+
+function getMultipleLengths([string1, string2, string3, string4, string5]) {
+    console.log([string1.length, string2.length, string3.length, string4.length, string5.length]);
+};
+
+getMultipleLengths(["hmmmmm", "does", "this", "thing", "work"]);
+console.log("");
+
+// G. maxOfThree
+// Define a function maxOfThree that takes three numbers as arguments and returns the largest of them.
+//If all numbers are the same, it doesn't matter which one is returned. If the two largest numbers are the same,
+//one of them should be returned. Be sure to test it with larger values in each of the three locations.
+// console.log(maxOfThree(6, 9, 1));
+// => 9
+// Did you use Google and find Math.max()? If so, great job! Very resourceful—keep looking stuff up! 
+//However, for this particular question, we need you to submit a solution that does not use Math.max().
+
+function maxOfThree(number, numero, numeral) {
+    let max_val = 0;
+    if (number >= numero) {
+    max_val = number;
+    } else {
+    max_val = numero;
+    } if (numeral >= max_val) {
+    max_val = numeral;
+    }
+    console.log(max_val);
+};
+
+maxOfThree(466, 66587, 6565);
+console.log("");
+
+// H. printLongestWord
+// Write a function printLongestWordthat accepts a single argument, an array of strings. 
+//The method should return the longest word in the array. In case of a tie, the method should return the word that appears first in the array.
+// console.log(printLongestWord(["BoJack", "Princess", "Diane", "a", "Max", "Peanutbutter", "big", "Todd"]));
+// => "Peanutbutter"
+
+function printLongestWord(arra)
+{
+    let max_str = arra[0].length;
+    let ans = arra[0];
+    for (let i = 1; i < arra.length; i++) {
+        const maxi = arra[i].length;
+        if (maxi > max_str) {
+            ans = arra[i];
+            max_str = maxi;
+        }
+    }
+    console.log(ans);
+};
+
+// function printLongestWord([string1, string2, string3, string4, string5]) {
+//     let wordLength = [string1.length, string2.length, string3.length, string4.length, string5.length];
+//     let longestWord = Math.max(wordLength);
+//     console.log(longestWord)
+//     wordLength.forEach((number) => {
+//         if (longestWord == number) {
+//             if (number == [i]) {
+//                 console.log(i)
+//             } else {
+//                 console.log(printLongestWord[0]);
+//             }
+//         }
+//     })
+// };
+
+printLongestWord(["hello", "its", "almost", "christmas", "eve"]);
+console.log("");
