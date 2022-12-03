@@ -526,19 +526,64 @@ console.log("");
 // console.log(printLongestWord(["BoJack", "Princess", "Diane", "a", "Max", "Peanutbutter", "big", "Todd"]));
 // => "Peanutbutter"
 
-function printLongestWord(arra)
-{
-    let max_str = arra[0].length;
-    let ans = arra[0];
-    for (let i = 1; i < arra.length; i++) {
-        const maxi = arra[i].length;
-        if (maxi > max_str) {
-            ans = arra[i];
-            max_str = maxi;
-        }
-    }
-    console.log(ans);
-};
+// let array = ["hello", "its", "almost", "christmas", "eve"];
+// let length = 0;
+// var longestWord;
+
+// function printLongestWord() {
+//     for (let i = 0; i <array.length; i++) {
+//         if (array[i].length > length) {
+//             length = array[i].length;
+//             longestWord = array[i];
+//             console.log(longestWord);
+//         }  for (let k = 0; k < array.length; k++) {
+//             if (longestWord == array[k]) {
+//                 console.log(array[0]);
+//             } else {
+//                 console.log(longestWord);
+//             }
+//         }
+//     }
+// };
+
+// let longestWord = 0;
+
+// function printLongestWord(array) {
+//     for (let i = 0; i < array.length; i++) {
+//         if (array[i].length > longestWord && longestWord != array[i]) {
+//             longestWord = array[i];
+//             console.log(longestWord);
+//             // if (longestWord == array[i]) {
+//             //     console.log("There's a match!");
+//             // }
+//         } else {
+//             console.log(array[0]);
+//         }
+//     }
+// };
+
+// printLongestWord(array);
+// console.log("");
+
+// function printLongestWord(array) {
+//     let max_str = array[0].length;
+//     let ans = array[0];
+//     let foundMatch = 0
+//     for (let i = 1; i < array.length; i++) {
+//         const maxi = array[i].length;
+//         if (maxi > max_str) {
+//             ans = array[i];
+//             max_str = maxi;
+//             console.log(ans)
+//             if ( max_str == array[i].length) {
+//                 foundMatch += 1;
+//                 if (foundMatch > 0) {
+//                     console.log(array[0]);
+//                 } 
+//             }
+//         } 
+//     }
+// };
 
 // function printLongestWord([string1, string2, string3, string4, string5]) {
 //     let wordLength = [string1.length, string2.length, string3.length, string4.length, string5.length];
@@ -555,5 +600,119 @@ function printLongestWord(arra)
 //     })
 // };
 
-printLongestWord(["hello", "its", "almost", "christmas", "eve"]);
+// printLongestWord(array);
+// console.log("");
+
+// Objects
+// Let's set up an object data structure. Let's say we have a website that sells products, and we have a user of our website,
+//and we want to store that user's data. The object data structure is a good way to organize the data from our user.
+// A. Make a user object
+// Create an object called user.
+// Write in to the object the key-value pairs for name, email, age, and purchased. 
+//Set the value of purchasedto an empty array []. Set the other values to whatever you would like.
+
+let user = {
+    name: "Lisa Monroe",
+    email: "LMonroe@address.com",
+    age: 37,
+    purchased: [],
+};
+console.log(user);
 console.log("");
+
+// B. Update the user
+// Our user has changed his or her email address. Without changing the original user object, update the email value to a new email address.
+// Our user has had a birthday! Without changing the original user object, increment the age value using the postfix operator. Hint: age++
+
+user.email = "LMonroeDevareaux@address.com";
+console.log(user.email);
+console.log("");
+
+user.age = user.age+1;
+console.log(user.age);
+console.log("");
+
+// C. Adding keys and values
+// You have decided to add your user's location to the data that you want to collect.
+// Without changing the original userobject, add a new key locationto the object, and give it a value or some-or-other location (a string).
+
+user.location = ("5555 Bedford Blvd. Los Angeles, CA 55555" || address);
+console.log(user);
+console.log("");
+
+// D. Shopaholic!
+// Our user has purchased an item! They have purchased some "carbohydrates". Using .push(), add the string "carbohydrates" to the purchasedarray.
+// Our user has purchased an item! They have purchased some "peace of mind". Using .push(), add the string "peace of mind" to the purchasedarray.
+// Our user has purchased an item! They have purchased some "Merino jodhpurs". Using .push(), add the string "Merino jodhpurs" to the purchasedarray.
+// Console.log just the "Merino jodhpurs" from the purchasedarray.
+
+user.purchased.push("carbohydrates");
+user.purchased.push("peace of mind");
+user.purchased.push("Merino jodhpurs");
+console.log(user.purchased[2]);
+console.log("");
+
+// E. Object-within-object
+// Remember that you can add an object to an existing object in the same way that you can add any new property/value pair.
+// If we want to give our user a friendwith a nameand age, we could write:
+// user.friend = {
+//     name: "Grace Hopper",
+//     age: 85
+// }
+// When we console.log user, we would see the friendobject added to our user object.
+// Write a friendobject into your userobject and give the friend a name, age, location, and purchased array (empty for now)
+// Console.log just the friend's name
+// Console.log just the friend's location
+// CHANGE the friend's age to 55
+// The friendhas purchased "The One Ring". Use .push()to add "The One Ring" to the friend's purchasedarray.
+// The friendhas purchased "A latte". Use .push()to add "A latte" to the friend's purchasedarray.
+// Console.log just "A latte" from the friend's purchasedarray.
+
+user.friend = {
+    name: "Diane Ferguson",
+    age: 40,
+    location: "5656 Antigua Lane Los Angeles, CA 56565",
+    purchased: [],
+};
+console.log(user.friend.name);
+console.log("");
+console.log(user.friend.location);
+console.log("");
+user.friend.age = 55
+user.friend.purchased.push("The One Ring");
+user.friend.purchased.push("A latte");
+console.log(user.friend.purchased[1]);
+console.log("");
+
+// F. Loops
+// Write a for loop that iterates over the User's purchased array (NOT the friend's purchased array), and prints each element to the console.
+// Write a for loop that iterates over the Friend's purchased array, and prints each element to the console.
+
+for (let i=0; i < user.purchased.length; i++) {
+    console.log(user.purchased[i]);
+};
+console.log("");
+for (let i=0; i < user.friend.purchased.length; i++) {
+    console.log(user.friend.purchased[i]);
+};
+console.log("");
+
+// G. Functions can operate on objects
+// Write a single function updateUserthat takes no parameters. When the function is run, it should:
+// it should increment the user's age by 1
+// make the user's name uppercase
+// The function does not need a returnstatement, it will merely modify the user object.
+// Write a function oldAndLoudthat performs the exact same tasks as updateUser, but instead of hard-coding
+//it to only work on our userobject, make it take a parameter person, and have it modify the object that is passed in
+//as an argument when the function is called. Call your oldAndLoudfunction with useras the argument.
+
+function updateUser() {
+    user.age = user.age+1;
+    user.name = user.name.toUpperCase();
+};
+function oldAndLoud(person) {
+    person.age = person.age+1;
+    person.name = person.name.toUpperCase();
+};
+oldAndLoud(user);
+console.log(user);
